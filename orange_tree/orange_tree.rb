@@ -1,12 +1,4 @@
-class OrangeTree
-  attr_reader :age, :height, :fruit
-  
-  def initialize
-    @age = 0
-    @height = 0
-    @fruit = 0
-  end
-  
+class OrangeTree < ActiveRecord::Base  
   def one_year_passes
     return "the tree is dead" if not alive?
     @age = @age + 1
